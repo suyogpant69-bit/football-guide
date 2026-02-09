@@ -5,69 +5,58 @@
     <title>Football Guide</title>
     <style>
         body { font-family: sans-serif; background: #f0f2f5; margin: 0; }
-        nav { background: #1a3c15; padding: 1rem; display: flex; justify-content: center; position: sticky; top: 0; }
+        nav { background: #1a3c15; padding: 1rem; display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
 
-       .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: white;
-    padding: 40px 60px;   
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    box-sizing: border-box; 
-    padding: 40px 60px !important; /* This adds the missing gap on the sides */
-    box-sizing: border-box;
-}
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px 60px !important;   
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-sizing: border-box; 
+        }
 
+        .content-section h2, 
+        .content-section h3, 
+        .content-section p {
+            margin-left: 0;       
+            padding-left: 10px;  
+        } 
 
-.content-section h2, 
-.content-section h3, 
-.content-section p {
-    margin-left: 0;       
-    padding-left: 10px;  
-} 
-.main-img {
-    
-    max-width: 80% !important; 
-    
-  
-    height: auto !important;
-    
-   
-    display: block;
-    margin: 0 auto 30px auto; 
-    
-    border-radius: 8px;
-    object-fit: contain;
-}
+        .main-img {
+            max-width: 80% !important; 
+            height: auto !important;
+            display: block;
+            margin: 0 auto 30px auto; 
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+       
         .content-section { display: none; }
-        .content-section:target { display: block; animation: fadeIn 0.5s; }
+        .content-section:target { display: block; }
         
        
         #about { display: block; }
         :target:not(#about) ~ #about { display: none; }
 
-        .main-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            background: #ddd; 
-        
-        }
         p {
-    margin-bottom: 1.5rem; 
-    line-height: 1.7;     
-    color: #333;
-}
+            margin-bottom: 1.5rem; 
+            line-height: 1.7;     
+            color: #333;
+        }
 
-li {
-    margin-bottom: 10px;   
-}
+        li {
+            margin-bottom: 10px;   
+        }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .highlight-box {
+            padding: 20px; 
+            border-radius: 8px; 
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -79,133 +68,107 @@ li {
     <a href="project.html" style="color: #ffbaba;">Logout</a>
 </nav>
 
-<section id="competitions" class="content-section">
-    <img src="trophy.jpg" alt="Football Goal" class="main-img">
-    <h2>Major Football Competitions: The Stages of Glory</h2>
-    
-    <p>Football competitions are the heartbeat of the sport, providing the stage where legends are born and history is written. These tournaments range from global spectacles involving nations to elite club competitions that showcase the highest level of tactical play.</p>
+<div class="container">
+    <section id="competitions" class="content-section">
+        <img src="trophy.jpg" alt="Football Trophy" class="main-img">
+        <h2>Major Football Competitions: The Stages of Glory</h2>
+        
+        <p>Football competitions are the heartbeat of the sport, providing the stage where legends are born and history is written. These tournaments range from global spectacles involving nations to elite club competitions that showcase the highest level of tactical play.</p>
 
-    <div class="highlight-box" style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #1565c0; margin: 20px 0;">
-        <h3>The Pinnacle: International Tournaments</h3>
-        <p>National team competitions represent the highest honor a player can achieve, playing for their country's pride.</p>
+        <div class="highlight-box" style="background: #e3f2fd; border-left: 5px solid #1565c0;">
+            <h3>The Pinnacle: International Tournaments</h3>
+            <p>National team competitions represent the highest honor a player can achieve, playing for their country's pride.</p>
+            <ul>
+                <li><strong>FIFA World Cup:</strong> Established in 1930, it is the most-watched sporting event on Earth. Held every four years, it determines the world champion among nations.</li>
+                <li><strong>UEFA European Championship (The Euros):</strong> Featuring Europe's top nations, this tournament is often considered nearly as difficult to win as the World Cup.</li>
+                <li><strong>Copa América:</strong> The oldest international continental football competition, featuring powerhouse nations like Brazil and Argentina.</li>
+            </ul>
+        </div>
+
+        <h2>Elite Club Football</h2>
+        <p>Club football is played year-round and represents the commercial and technical peak of the sport.</p>
+
+        <h3>UEFA Champions League</h3>
+        <p>The Champions League is the most prestigious club trophy in the world. It brings together the top-ranked teams from European leagues like Real Madrid and Bayern Munich.</p>
+
+        <h3>The "Big Five" Domestic Leagues</h3>
         <ul>
-            <li><strong>FIFA World Cup:</strong> Established in 1930, it is the most-watched sporting event on Earth. Held every four years, it determines the world champion among nations.</li>
-            <li><strong>UEFA European Championship (The Euros):</strong> Featuring Europe's top nations, this tournament is often considered nearly as difficult to win as the World Cup due to the concentration of elite teams.</li>
-            <li><strong>Copa América:</strong> The oldest international continental football competition, featuring the powerhouse nations of South America like Brazil and Argentina.</li>
+            <li><strong>English Premier League:</strong> Known for its intensity and global broadcast reach.</li>
+            <li><strong>La Liga (Spain):</strong> Famous for technical brilliance and the "El Clásico" rivalry.</li>
+            <li><strong>Bundesliga (Germany):</strong> Celebrated for high fan attendance and fast, attacking football.</li>
+            <li><strong>Serie A (Italy):</strong> Historically known for tactical mastery.</li>
+            <li><strong>Ligue 1 (France):</strong> Known for producing incredible young talent.</li>
         </ul>
-    </div>
 
-    <h2>Elite Club Football</h2>
-    <p>Club football is played year-round and represents the commercial and technical peak of the sport. These competitions are divided into domestic leagues and continental "Super" leagues.</p>
+        <h3>The Domestic Cup Tradition</h3>
+        <p>Knockout cups like the <strong>FA Cup</strong> allow tiny "underdog" teams to play against professional giants, leading to famous "Giant Killings."</p>
 
-    <h3>UEFA Champions League</h3>
-    <p>The Champions League is the most prestigious club trophy in the world. It brings together the top-ranked teams from European leagues (like Real Madrid, Bayern Munich, and Manchester City). The "Anthem" and the iconic "Starball" logo have become symbols of football excellence.</p>
-
-    <h3>The "Big Five" Domestic Leagues</h3>
-    <p>Most football fans follow one of the major European leagues, known for their history and star-studded rosters:</p>
-    <ul>
-        <li><strong>English Premier League:</strong> Known for its intensity, global broadcast reach, and immense financial power.</li>
-        <li><strong>La Liga (Spain):</strong> Famous for technical brilliance and the historic "El Clásico" rivalry between Real Madrid and Barcelona.</li>
-        <li><strong>Bundesliga (Germany):</strong> Celebrated for high fan attendance, safe standing sections, and fast, attacking football.</li>
-        <li><strong>Serie A (Italy):</strong> Historically known for tactical mastery and world-class defending.</li>
-        <li><strong>Ligue 1 (France):</strong> A league known for producing incredible young talent and world-class superstars.</li>
-    </ul>
-
-    
-
-    <h3>The Domestic Cup Tradition</h3>
-    <p>In addition to league play, most countries host "Knockout" cups, such as the <strong>FA Cup</strong> in England. These are unique because they allow tiny, amateur "underdog" teams to play against billion-dollar professional giants, leading to the famous "Giant Killings" that fans love.</p>
-
-    <h2>The Evolution of Women's Competitions</h2>
-    <p>The <strong>FIFA Women's World Cup</strong> and the <strong>Women's Champions League</strong> have seen explosive growth in recent years. With record-breaking stadium attendances and rising professional standards, these competitions are redefining the global landscape of the sport.</p>
-
-    <hr>
-
-    <h3>Summary of Competition Formats</h3>
-    <p>Most football competitions follow one of two formats: <strong>League Format</strong> (where every team plays each other and points are totaled over a season) or <strong>Tournament Format</strong> (which uses a "Group Stage" followed by "Knockout Rounds" where the loser is eliminated immediately).</p>
-</section>
+        <h2>The Evolution of Women's Competitions</h2>
+        <p>The <strong>FIFA Women's World Cup</strong> and the <strong>Women's Champions League</strong> have seen explosive growth, redefining the global landscape of the sport.</p>
+    </section>
 
     <section id="players" class="content-section">
         <img src="player.jpg" alt="Football Player" class="main-img">
-    <h2>Football Players: Icons, Legends, and Game Changers</h2>
-    
-    <p>Football (soccer) is not just about teams and tactics — it is defined by the extraordinary individuals who have shaped its history. From skillful dribblers to prolific scorers, visionary playmakers to tactical leaders, football players are celebrated around the world for their talent, influence, and legacy.</p>
+        <h2>Football Players: Icons, Legends, and Game Changers</h2>
+        
+        <p>Football is defined by the extraordinary individuals who have shaped its history. From skillful dribblers to prolific scorers, football players are celebrated for their talent and legacy.</p>
 
-    <div class="highlight-box" style="background: #e9f5e9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-        <h3>What Makes a Football Player Great?</h3>
-        <p>Great players combine a mix of:</p>
-        <ul>
-            <li><strong>Technique and skill:</strong> Exceptional ball control, dribbling, and creative play.</li>
-            <li><strong>Game intelligence:</strong> Reading the match and making decisive moves.</li>
-            <li><strong>Consistency and longevity:</strong> Performing at the top level over many years.</li>
-            <li><strong>Impact on culture:</strong> Inspiring fans and shaping football history.</li>
-        </ul>
-    </div>
+        <div class="highlight-box" style="background: #e9f5e9; border-radius: 8px;">
+            <h3>What Makes a Football Player Great?</h3>
+            <ul>
+                <li><strong>Technique and skill:</strong> Exceptional ball control and creative play.</li>
+                <li><strong>Game intelligence:</strong> Reading the match and making decisive moves.</li>
+                <li><strong>Impact on culture:</strong> Inspiring fans and shaping history.</li>
+            </ul>
+        </div>
 
-    <h2>Most Impactful Players in History</h2>
+        <h2>Most Impactful Players in History</h2>
 
-    <h3>Pelé – “The King” of Football</h3>
-    <p>Pelé is widely regarded as one of the greatest footballers ever. A natural scorer with a complete skill set, Pelé became a global ambassador for football at a time when the sport was spreading around the world. He won three FIFA World Cups (1958, 1962, 1970) — a record unmatched by any other player.</p>
+        <h3>Pelé – “The King” of Football</h3>
+        <p>Pelé is widely regarded as one of the greatest ever. He won three FIFA World Cups (1958, 1962, 1970) — a record unmatched by any other player.</p>
 
-    <h3>Diego Maradona – The Magical Genius</h3>
-    <p>Diego Maradona is remembered as one of the most charismatic and influential players in football history. His dribbling, creativity, and vision were unmatched, and he almost single-handedly carried Argentina to World Cup glory in 1986. Legendary moments like the “Goal of the Century” against England highlighted his brilliance.</p>
+        <h3>Diego Maradona – The Magical Genius</h3>
+        <p>Maradona almost single-handedly carried Argentina to World Cup glory in 1986. Legendary moments like the “Goal of the Century” highlighted his brilliance.</p>
 
-    <h3>Lionel Messi – The Maestro of Modern Football</h3>
-    <p>Argentine forward Lionel Messi is celebrated as one of the greatest players of the modern era. Known for his extraordinary dribbling and playmaking, Messi has broken numerous records at club and international level, finally lifting the FIFA World Cup to solidify his legacy.</p>
+        <h3>Lionel Messi – The Maestro of Modern Football</h3>
+        <p>Messi has broken numerous records, finally lifting the FIFA World Cup to solidify his legacy as one of the greatest players of the modern era.</p>
 
-    <h3>Cristiano Ronaldo – The Goal Machine</h3>
-    <p>Cristiano Ronaldo is one of the most prolific goal scorers in football history. Renowned for his physical power and work ethic, Ronaldo has succeeded in multiple leagues and holds records for goals in elite competitions, becoming a global sporting icon.</p>
+        <h3>Cristiano Ronaldo – The Goal Machine</h3>
+        <p>Renowned for his physical power and work ethic, Ronaldo has succeeded in multiple leagues and holds records for goals in elite competitions.</p>
 
-    <h3>Johan Cruyff – The Visionary Pioneer</h3>
-    <p>Johan Cruyff was a revolutionary thinker. As the leading figure behind “Total Football,” a tactical philosophy emphasizing fluid positioning, Cruyff changed how football was played and coached, especially at clubs like Ajax and Barcelona.</p>
+        <h3>Johan Cruyff – The Visionary Pioneer</h3>
+        <p>The leading figure behind “Total Football,” Cruyff changed how football was played and coached at clubs like Ajax and Barcelona.</p>
+    </section>
 
-    <hr>
+    <section id="about" class="content-section">
+        <img src="football.jpg" alt="Football History" class="main-img">
+        <h2>Football: History, Evolution, and Global Legacy</h2>
+        
+        <p>Football is more than just a sport — it is a cultural phenomenon that has shaped societies and inspired nations.</p>
 
-    <h3>Other Legends Who Defined Eras</h3>
-    <ul>
-        <li><strong>Zinedine Zidane:</strong> A midfield genius known for technique and elegance.</li>
-        <li><strong>Franz Beckenbauer:</strong> One of the greatest defenders and pioneers of the “sweeper” role.</li>
-        <li><strong>Michel Platini:</strong> A midfielder of precision, creativity, and leadership.</li>
-    </ul>
+        <div class="highlight-box" style="background: #f9f9f9; border-left: 5px solid #1a3c15;">
+            <h3>Ancient Origins</h3>
+            <ul>
+                <li><strong>Cuju (China):</strong> Military texts describe kicking a leather ball through a small opening.</li>
+                <li><strong>Kemari (Japan):</strong> An early game involving foot skills and ball control.</li>
+                <li><strong>Mesoamerica:</strong> Traditional games used rubber balls long before modern rules.</li>
+            </ul>
+        </div>
 
-    <h3>Why These Players Matter</h3>
-    <p>Legendary football players matter not only because of individual trophies, but because they helped define different eras of football. They pushed boundaries, inspired millions, and brought joy to fans everywhere.</p>
-</section>
+        <h2>The Birth of Modern Football</h2>
+        <p>The modern game originated in 19th-century England. In <strong>1863</strong>, the Football Association (FA) was formed to codify the first standardized rules.</p>
+        
+        <h2>Globalization & Cultural Impact</h2>
+        <p>In 1904, <strong>FIFA</strong> was formed to govern the sport globally. By 1930, the first FIFA World Cup was held in Uruguay, evolving into the world's most-watched sporting event.</p>
 
-   <section id="about" class="content-section">
-    <img src="football.jpg" alt="" class="main-img">
-    <h2>Football: History, Evolution, and Global Legacy</h2>
-    
-    <p>Football is more than just a sport — it is a cultural phenomenon that has shaped societies and inspired nations. While "football" can mean different things globally, it generally refers to team sports where a ball is advanced primarily by kicking and strategic movement.</p>
+        <div style="background: #fff8e1; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3>American Football: A Parallel Path</h3>
+            <p>American football evolved separately in the U.S. from rugby and soccer roots. Figures like Walter Camp introduced the line of scrimmage, leading to the NFL and the Super Bowl.</p>
+        </div>
 
-    <div class="highlight-box" style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 5px solid #1a3c15; margin: 20px 0;">
-        <h3>Ancient Origins</h3>
-        <p>The roots of the game reach back thousands of years across various civilizations:</p>
-        <ul>
-            <li><strong>Cuju (China):</strong> Military texts from the Han Dynasty describe kicking a leather ball through a small opening.</li>
-            <li><strong>Kemari (Japan):</strong> An early Japanese game involving foot skills and ball control.</li>
-            <li><strong>Mesoamerica:</strong> Traditional games used rubber balls long before modern rules existed.</li>
-        </ul>
-    </div>
-
-    <h2>The Birth of Modern Football</h2>
-    <p>The modern game of <strong>Association Football</strong> originated in 19th-century England. Before this, "mob football" was chaotic and often violent. The turning point came in <strong>1863</strong>, when the Football Association (FA) was formed in London to codify the first standardized rules.</p>
-    
-    <p>This unification led to the founding of the Football League in 1888, creating the structure for the professional sport we see today.</p>
-
-    
-
-    <h2>Globalization & Cultural Impact</h2>
-    <p>In 1904, <strong>FIFA</strong> was formed in Paris to govern the sport globally. By 1930, the first FIFA World Cup was held in Uruguay, evolving into the world's most-watched sporting event. Today, leagues like the Premier League and La Liga are woven into national identities across the globe.</p>
-
-    <div style="background: #fff8e1; padding: 20px; border-radius: 8px; margin: 20px 0;">
-        <h3>American Football: A Parallel Path</h3>
-        <p>While the rest of the world focused on soccer, American football evolved separately in the U.S. from rugby and soccer roots. Figures like <strong>Walter Camp</strong> introduced the line of scrimmage and the forward pass, creating the "gridiron" style that led to the NFL and the Super Bowl spectacle.</p>
-    </div>
-
-    <h2>Football Today</h2>
-    <p>Whether it is the global appeal of the World Cup or the strategy of the NFL, football reflects social values and community spirit. It remains "The World's Game," fostering unity and inclusion across every continent.</p>
-</section>
+        <h2>Football Today</h2>
+        <p>Whether it is the global appeal of the World Cup or the strategy of the NFL, football remains "The World's Game," fostering unity and inclusion across every continent.</p>
+    </section>
 </div>
 
 </body>
